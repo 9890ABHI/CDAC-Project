@@ -1,11 +1,11 @@
 ---
-- name: Install and Configure Slurm on EC2 Instances
+- name: Install and Configure SSH on EC2 Instances
   hosts: all
   gather_facts: yes
   tasks:
     - name: Load inventory hosts
       set_fact:
-        inventory: "{{ groups['all'] }}"  # Use 'all' or another group name as needed
+        inventory: "{{ groups['all'] }}" # Use 'all' or another group name as needed
 
     - name: Remove old SSH host keys
       command: ssh-keygen -f '/root/.ssh/known_hosts' -R "{{ item }}"

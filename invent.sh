@@ -21,8 +21,8 @@ sudo ./aws/install
 
 
 export KEY_NAME=boot-1
-export IMAGE_NAME=ami-04a81a99f5ec58529
-export SUBNET_NAME=subnet-0af822569e9483069
+export IMAGE_NAME=ami-0b6c6ebed2801a5cb
+export SUBNET_NAME=subnet-0f7dc1bcacfa8e2fc
 
 echo "provisioning instances"
 ansible-playbook provisioning.yml | tee provision-output.txt
